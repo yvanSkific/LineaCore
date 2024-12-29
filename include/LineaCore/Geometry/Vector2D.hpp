@@ -1,11 +1,6 @@
 // Vector2D.hpp
-#ifndef LINEACORE_GEOMETRY_VECTOR2D_HPP
-#define LINEACORE_GEOMETRY_VECTOR2D_HPP
-
+#pragma once
 #include <string>
-#include <cmath>
-#include <sstream>
-#include <numbers>
 
 namespace LineaCore::Geometry {
 
@@ -17,7 +12,8 @@ public:
     double Y;
 
     // Constructeurs
-    Vector2D(double x = 0.0, double y = 0.0); // Par défaut, initialise à (0, 0)
+    Vector2D();                                 // Par défaut, initialise à (0, 0)
+    Vector2D(double x, double y);             // Initialise avec des coordonnées X et Y
     explicit Vector2D(double angle);          // Initialise avec un angle en radians
 
     // Méthodes statiques
@@ -27,8 +23,8 @@ public:
     double Length() const;                // Retourne la longueur du vecteur
     void Normalize();                     // Normalise le vecteur (longueur = 1)
     Vector2D Normalized() const;          // Retourne une copie normalisée
-    Vector2D Rotated90CounterClockwise() const; // Retourne une copie après une rotation de 90° antihoraire
-    Vector2D Rotated90Clockwise() const;        // Retourne une copie après une rotation de 90° horaire
+    Vector2D Rotated90CounterClockWise() const; // Retourne une copie après une rotation de 90° antihoraire
+    Vector2D Rotated90ClockWise() const;        // Retourne une copie après une rotation de 90° horaire
     double Angle02Pi() const;             // Retourne l'angle dans [0, 2π)
     double AngleMinusPiPi() const;        // Retourne l'angle dans [-π, π]
 
@@ -52,4 +48,3 @@ public:
 
 } // namespace LineaCore::Geometry
 
-#endif // LINEACORE_GEOMETRY_VECTOR2D_HPP

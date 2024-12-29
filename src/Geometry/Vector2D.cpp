@@ -1,5 +1,8 @@
 // Vector2D.cpp
-#include "../../include/LineaCore/Geometry/Vector2D.hpp"
+#include "LineaCore/Geometry/Vector2D.hpp"
+#include <cmath>
+#include <sstream>
+#include <numbers>
 
 namespace LineaCore::Geometry {
 
@@ -7,8 +10,11 @@ namespace LineaCore::Geometry {
 // Initialisation avec les coordonnées X et Y
 Vector2D::Vector2D(double x, double y) : X(x), Y(y) {}
 
-// Initialisation avec un angle en radians, utilisant les fonctions trigonométriques
-Vector2D::Vector2D(double angle) : X(std::cos(angle)), Y(std::sin(angle)) {}
+// Constructeur par défaut initialisant à (0, 0)
+Vector2D::Vector2D() : Vector2D(0.0, 0.0) {}
+
+// Crée un vecteur à partir d'un angle en radians
+Vector2D::Vector2D(double angle) : Vector2D(std::cos(angle), std::sin(angle)) {}
 
 // Méthodes statiques
 // Crée un vecteur à partir d'une représentation polaire (rayon et angle)
@@ -42,18 +48,19 @@ Vector2D Vector2D::Normalized() const {
 }
 
 // Retourne une copie du vecteur après une rotation de 90° dans le sens antihoraire
-Vector2D Vector2D::Rotated90CounterClockwise() const {
+Vector2D Vector2D::Rotated90CounterClockWise() const {
     return Vector2D(-Y, X);
 }
 
 // Retourne une copie du vecteur après une rotation de 90° dans le sens horaire
-Vector2D Vector2D::Rotated90Clockwise() const {
+Vector2D Vector2D::Rotated90ClockWise() const {
     return Vector2D(Y, -X);
 }
 
 // Calcule l'angle du vecteur par rapport à l'axe X, dans [0, 2π)
 double Vector2D::Angle02Pi() const {
-    return std::atan2(Y, X) < 0 ? std::atan2(Y, X) + 2 * std::numbers::pi : std::atan2(Y, X);
+    double angle = std::atan2(Y, X);
+    return angle < 0 ? angle + 2 * std::numbers::pi : angle;
 }
 
 // Calcule l'angle du vecteur par rapport à l'axe X, dans [-π, π]

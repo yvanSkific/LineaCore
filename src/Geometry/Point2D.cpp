@@ -1,8 +1,10 @@
 // Point2D.cpp
-#include "Point2D.hpp"
-#include <sstream>
+#include "LineaCore/Geometry/Point2D.hpp"
 #include <cmath>
 #include <stdexcept>
+#include <string>
+#include <sstream>
+
 
 namespace LineaCore::Geometry {
 

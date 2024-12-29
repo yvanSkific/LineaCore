@@ -3,3 +3,7 @@ build/
 
 # Visual Studio Code files
 .vscode/
+
+# Google Test submodule (if you want to exclude it)
+#external/googletest/
+external/libxml2/
