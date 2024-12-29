@@ -8,6 +8,11 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_CXX_EXTENSIONS OFF) # Désactiver les extensions spécifiques au compilateur
 
+#rediriger toutes les sorties vers le répertoire bin
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
 # Inclure les répertoires pour les fichiers d'en-tête
 include_directories(${CMAKE_SOURCE_DIR}/include)
 

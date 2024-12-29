@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LandXML xmlns="http://www.landxml.org/schema/LandXML-1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.landxml.org/schema/LandXML-1.2 http://www.landxml.org/schema/LandXML-1.2/LandXML-1.2.xsd" date="2020-02-23" time="10:23:29" version="1.2">
+  <Units>
+    <Metric areaUnit="squareMeter" linearUnit="meter" volumeUnit="cubicMeter" temperatureUnit="celsius" pressureUnit="milliBars" />
+  </Units>
+  <Application name="Linea" version="1.1.7358.18620" manufacturerURL="http://linea-trace.blogspot.com/" timeStamp="2020-02-23T10:20:40">
+    <Author createdBy="Yvan SKIFIC" createdByEmail="yskific@gmail.com" />
+  </Application>
+  <Alignments>
+    <Alignment name="Axe_Ligne_Principal" length="3086.4853811366042" staStart="-356.673869696117">
+      <CoordGeom>
+        <Line>
+          <Start>2269697.92508778 1569826.83623668</Start>
+          <End>2270039.86048511 1569958.7570278</End>
+        </Line>
+        <Spiral length="45.000002560299329" radiusEnd="380.000000000486" radiusStart="INF" rot="cw" spiType="clothoid">
+          <Start>2270039.86048511 1569958.7570278</Start>
+          <PI>2270067.8548124535 1569969.5574123706</PI>
+          <End>2270081.50993804 1569975.77737137</End>
+        </Spiral>
+        <Curve rot="cw">
+          <Start>2270081.50993804 1569975.77737137</Start>
+          <Center>2269923.9902623454 1570321.5917027236</Center>
+          <End>2270303.973001 1570325.21362555</End>
+        </Curve>
+        <Spiral length="45.000002561565758" radiusEnd="INF" radiusStart="380.00000000048607" rot="cw" spiType="clothoid">
+          <Start>2270303.973001 1570325.21362555</Start>
+          <PI>2270303.8299826304 1570340.2179546081</PI>
+          <End>2270301.76896648 1570370.15259813</End>
+        </Spiral>
+        <Line>
+          <Start>2270301.76896648 1570370.15259813</Start>
+          <End>2270286.57242877 1570590.87039779</End>
+        </Line>
+        <Spiral length="45.000010044683158" radiusEnd="270.000105650494" radiusStart="INF" rot="cw" spiType="clothoid">
+          <Start>2270286.57242877 1570590.87039779</Start>
+          <PI>2270284.5110411854 1570620.8104361221</PI>
+          <End>2270282.23718889 1570635.64713311</End>
+        </Spiral>
+        <Curve rot="cw">
+          <Start>2270282.23718889 1570635.64713311</Start>
+          <Center>2270015.3532061451 1570594.7448494884</Center>
+          <End>2270282.11573913 1570636.43187441</End>
+        </Curve>
+        <Spiral length="45.000010044068631" radiusEnd="INF" radiusStart="270.00010565049394" rot="cw" spiType="clothoid">
+          <Start>2270282.11573913 1570636.43187441</Start>
+          <PI>2270279.7982608657 1570651.2618196649</PI>
+          <End>2270272.71270209 1570680.42429677</End>
+        </Spiral>
+        <Line>
+          <Start>2270272.71270209 1570680.42429677</Start>
+          <End>2270185.33091007 1571040.06699725</End>
+        </Line>
+        <Spiral length="36.000000135727817" radiusEnd="600.000000010871" radiusStart="INF" rot="ccw" spiType="clothoid">
+          <Start>2270185.33091007 1571040.06699725</Start>
+          <PI>2270179.6642581 1571063.3895907789</PI>
+          <End>2270177.18189769 1571075.13108031</End>
+        </Spiral>
+        <Curve rot="ccw">
+          <Start>2270177.18189769 1571075.13108031</Start>
+          <Center>2270764.2060521049 1571199.238461826</Center>
+          <End>2270168.05028915 1571267.04927445</End>
+        </Curve>
+        <Spiral length="36.000000136089049" radiusEnd="INF" radiusStart="600.00000001087085" rot="ccw" spiType="clothoid">
+          <Start>2270168.05028915 1571267.04927445</Start>
+          <PI>2270169.406621661 1571278.9734118083</PI>
+          <End>2270172.83327482 1571302.72867147</End>
+        </Spiral>
+        <Line>
+          <Start>2270172.83327482 1571302.72867147</Start>
+          <End>2270180.64719612 1571356.89865043</End>
+        </Line>
+        <Spiral length="45.000002080907755" radiusEnd="400.000000031659" radiusStart="INF" rot="cw" spiType="clothoid">
+          <Start>2270180.64719612 1571356.89865043</Start>
+          <PI>2270184.9310207092 1571386.596247412</PI>
+          <End>2270186.23491763 1571401.54400747</End>
+        </Spiral>
+        <Curve rot="cw">
+          <Start>2270186.23491763 1571401.54400747</Start>
+          <Center>2269787.7481110226 1571436.3041137022</Center>
+          <End>2270185.95097002 1571474.17868448</End>
+        </Curve>
+        <Spiral length="45.000002086385109" radiusEnd="INF" radiusStart="400.000000031659" rot="cw" spiType="clothoid">
+          <Start>2270185.95097002 1571474.17868448</Start>
+          <PI>2270184.5302454703 1571489.1157932945</PI>
+          <End>2270180.01436429 1571518.77898997</End>
+        </Spiral>
+        <Line>
+          <Start>2270180.01436429 1571518.77898997</Start>
+          <End>2270025.40002292 1572534.38490962</End>
+        </Line>
+      </CoordGeom>
+      <Profile>
+        <ProfAlign name="Axe_Ligne_Principal">
+          <PVI>-312.377567424425 123.646844035158</PVI>
+          <ParaCurve length="102.62888939305179">74.808747365268 125.969964519681</ParaCurve>
+          <ParaCurve length="74.501846669949188">473.091319601419 112.009543401993</ParaCurve>
+          <ParaCurve length="15.752431155035126">665.355623198124 111</ParaCurve>
+          <ParaCurve length="48.5064520590684">775 111</ParaCurve>
+          <ParaCurve length="141.84929096506332">1144.37079142312 96.666506731052</ParaCurve>
+          <ParaCurve length="87.58942856140942">1411.80898337279 107.364034409039</ParaCurve>
+          <ParaCurve length="14.892685726287278">1928.69797108618 109.929989492175</ParaCurve>
+          <ParaCurve length="49.075867351532871">2015 109.929989492175</ParaCurve>
+          <ParaCurve length="56.406364876740426">2590.46670027804 113.460180423183</ParaCurve>
+          <PVI>2905.81468536366 111.83715070691</PVI>
+          <Feature source="Linea 1.1.7358.18620">
+            <Property label="ProfAlignType" value="Self" />
+          </Feature>
+        </ProfAlign>
+      </Profile>
+    </Alignment>
+    <Alignment name="Voie_Nivelee" length="3088.7378340631926" staStart="-356.673869697704">
+      <CoordGeom>
+        <Line>
+          <Start>2269698.52979824 1569825.26884226</Start>
+          <End>2270040.41884439 1569957.17175081</End>
+        </Line>
+        <Spiral length="45.099353290979472" radiusEnd="381.68000000048607" radiusStart="INF" rot="cw" spiType="clothoid">
+          <Start>2270040.41884439 1569957.17175081</Start>
+          <PI>2270068.4749547616 1569967.995971662</PI>
+          <End>2270082.16102113 1569974.2278683</End>
+        </Spiral>
+        <Curve rot="cw">
+          <Start>2270082.16102113 1569974.2278683</Start>
+          <Center>2269923.9902623473 1570321.591702725</Center>
+          <End>2270305.6524468 1570325.27943365</End>
+        </Curve>
+        <Spiral length="45.099354547419615" radiusEnd="INF" radiusStart="381.68000000048613" rot="cw" spiType="clothoid">
+          <Start>2270305.6524468 1570325.27943365</Start>
+          <PI>2270305.5071509508 1570340.3168486564</PI>
+          <End>2270303.44158611 1570370.31755829</End>
+        </Spiral>
+        <Line>
+          <Start>2270303.44158611 1570370.31755829</Start>
+          <End>2270288.25326173 1570590.91606574</End>
+        </Line>
+        <Spiral length="45.139748281649396" radiusEnd="271.680105650494" radiusStart="INF" rot="cw" spiType="clothoid">
+          <Start>2270288.25326173 1570590.91606574</Start>
+          <PI>2270286.1854779054 1570620.949009161</PI>
+          <End>2270283.90841599 1570635.83230585</End>
+        </Spiral>
+        <Curve rot="cw">
+          <Start>2270283.90841599 1570635.83230585</Start>
+          <Center>2270015.3532058555 1570594.7448513685</Center>
+          <End>2270283.76475441 1570636.76056758</End>
+        </Curve>
+        <Spiral length="45.139730952259491" radiusEnd="INF" radiusStart="271.680105650494" rot="cw" spiType="clothoid">
+          <Start>2270283.76475441 1570636.76056758</Start>
+          <PI>2270281.4362495085 1570651.6358968848</PI>
+          <End>2270274.32870639 1570680.88885494</End>
+        </Spiral>
+        <Line>
+          <Start>2270274.32870639 1570680.88885494</Start>
+          <End>2270188.19206555 1571035.40680892</End>
+        </Line>
+        <Spiral length="46.409161143538277" radiusEnd="598.26000001087084" radiusStart="INF" rot="ccw" spiType="clothoid">
+          <Start>2270188.19206555 1571035.40680892</Start>
+          <PI>2270180.8867075229 1571065.4739273193</PI>
+          <End>2270177.81953515 1571080.63879763</End>
+        </Spiral>
+        <Curve rot="ccw">
+          <Start>2270177.81953515 1571080.63879763</Start>
+          <Center>2270764.2060521082 1571199.2384618074</Center>
+          <End>2270169.20798456 1571261.6269802</End>
+        </Curve>
+        <Spiral length="46.409161358912606" radiusEnd="INF" radiusStart="598.260000010871" rot="ccw" spiType="clothoid">
+          <Start>2270169.20798456 1571261.6269802</Start>
+          <PI>2270170.8214489971 1571277.0145587178</PI>
+          <End>2270175.23903603 1571307.63946359</End>
+        </Spiral>
+        <Line>
+          <Start>2270175.23903603 1571307.63946359</Start>
+          <End>2270182.30324713 1571356.61207952</End>
+        </Line>
+        <Spiral length="45.094392172610689" radiusEnd="401.680000031659" radiusStart="INF" rot="cw" spiType="clothoid">
+          <Start>2270182.30324713 1571356.61207952</Start>
+          <PI>2270186.5960543123 1571386.3719482932</PI>
+          <End>2270187.90444863 1571401.35088927</End>
+        </Spiral>
+        <Curve rot="cw">
+          <Start>2270187.90444863 1571401.35088927</Start>
+          <Center>2269787.7481110245 1571436.3041137245</Center>
+          <End>2270187.61894012 1571474.38484985</End>
+        </Curve>
+        <Spiral length="45.094392135541426" radiusEnd="INF" radiusStart="401.680000031659" rot="cw" spiType="clothoid">
+          <Start>2270187.61894012 1571474.38484985</Start>
+          <PI>2270186.1934745279 1571489.353103454</PI>
+          <End>2270181.66812417 1571519.07849976</End>
+        </Spiral>
+        <Line>
+          <Start>2270181.66812417 1571519.07849976</Start>
+          <End>2270027.0608866 1572534.63775705</End>
+        </Line>
+      </CoordGeom>
+      <Profile>
+        <ProfAlign name="Voie_Nivelee">
+          <PVI>-312.37756742444049 123.646844035158</PVI>
+          <ParaCurve length="103.03438590169452">74.9965554421606 125.969964519681</ParaCurve>
+          <ParaCurve length="74.816330009533942">475.03995589332737 112.009543401993</ParaCurve>
+          <ParaCurve length="15.752431155067825">667.49144195777558 111</ParaCurve>
+          <ParaCurve length="48.617504002720011">777.15313742939156 111</ParaCurve>
+          <ParaCurve length="141.8492909652241">1146.7915187235776 96.666506731052</ParaCurve>
+          <ParaCurve length="87.337197784890577">1413.7264972519781 107.364034409039</ParaCurve>
+          <ParaCurve length="14.892685726263608">1930.9504240084946 109.929989492175</ParaCurve>
+          <ParaCurve length="49.075867351458783">2017.2524529223315 109.929989492175</ParaCurve>
+          <ParaCurve length="56.406364876583211">2592.7191532001821 113.460180423183</ParaCurve>
+          <PVI>2908.0671382859546 111.83715070691</PVI>
+          <Feature source="Linea 1.1.7358.18620">
+            <Property label="ProfAlignType" value="Leveled" />
+            <Property label="LeveledAlignmentName" value="Axe_Ligne_Principal" />
+          </Feature>
+        </ProfAlign>
+      </Profile>
+    </Alignment>
+    <Alignment name="Voie_Nivelee_Velodrome" length="3084.0797846778996" staStart="-356.673869694956">
+      <CoordGeom>
+        <Line>
+          <Start>2269697.32037732 1569828.4036311</Start>
+          <End>2270035.4210392 1569958.84495757</End>
+        </Line>
+        <Spiral length="53.223994325439854" radiusEnd="378.230000000486" radiusStart="INF" rot="cw" spiType="clothoid">
+          <Start>2270035.4210392 1569958.84495757</Start>
+          <PI>2270068.5339845787 1569971.620136539</PI>
+          <End>2270084.60384882 1569979.1574627</End>
+        </Spiral>
+        <Curve rot="cw">
+          <Start>2270084.60384882 1569979.1574627</Start>
+          <Center>2269923.9902623459 1570321.5917027232</Center>
+          <End>2270302.21976772 1570320.98001255</End>
+        </Curve>
+        <Spiral length="53.223995407066312" radiusEnd="INF" radiusStart="378.230000000486" rot="cw" spiType="clothoid">
+          <Start>2270302.21976772 1570320.98001255</Start>
+          <PI>2270302.2484733835 1570338.7296889187</PI>
+          <End>2270299.81061095 1570374.13772794</End>
+        </Spiral>
+        <Line>
+          <Start>2270299.81061095 1570374.13772794</Start>
+          <End>2270284.8915812 1570590.82494195</End>
+        </Line>
+        <Spiral length="44.859816767332056" radiusEnd="268.320105650494" radiusStart="INF" rot="cw" spiType="clothoid">
+          <Start>2270284.8915812 1570590.82494195</Start>
+          <PI>2270282.8366113272 1570620.6717728961</PI>
+          <End>2270280.56598059 1570635.46171782</End>
+        </Spiral>
+        <Curve rot="cw">
+          <Start>2270280.56598059 1570635.46171782</Start>
+          <Center>2270015.3532058913 1570594.7448511315</Center>
+          <End>2270280.46666491 1570636.10344085</End>
+        </Curve>
+        <Spiral length="44.859799520242618" radiusEnd="INF" radiusStart="268.32010565049393" rot="cw" spiType="clothoid">
+          <Start>2270280.46666491 1570636.10344085</Start>
+          <PI>2270278.1602487932 1570650.8878416531</PI>
+          <End>2270271.09675072 1570679.95952074</End>
+        </Spiral>
+        <Line>
+          <Start>2270271.09675072 1570679.95952074</Start>
+          <End>2270183.70435105 1571039.6458798</End>
+        </Line>
+        <Spiral length="36.050363443821517" radiusEnd="601.68000001087114" radiusStart="INF" rot="ccw" spiType="clothoid">
+          <Start>2270183.70435105 1571039.6458798</Start>
+          <PI>2270178.0297722896 1571063.0010981145</PI>
+          <End>2270175.54344689 1571074.75890675</End>
+        </Spiral>
+        <Curve rot="ccw">
+          <Start>2270175.54344689 1571074.75890675</Start>
+          <Center>2270764.2060521082 1571199.238461822</Center>
+          <End>2270166.38390365 1571267.26420126</End>
+        </Curve>
+        <Spiral length="36.050363713479392" radiusEnd="INF" radiusStart="601.68000001087114" rot="ccw" spiType="clothoid">
+          <Start>2270166.38390365 1571267.26420126</Start>
+          <PI>2270167.7426338042 1571279.2049605502</PI>
+          <End>2270171.17408036 1571302.99345041</End>
+        </Spiral>
+        <Line>
+          <Start>2270171.17408036 1571302.99345041</Start>
+          <End>2270178.43249463 1571353.31237909</End>
+        </Line>
+        <Spiral length="52.734417642953751" radiusEnd="398.240000031659" radiusStart="INF" rot="cw" spiType="clothoid">
+          <Start>2270178.43249463 1571353.31237909</Start>
+          <PI>2270183.45292607 1571388.1164997602</PI>
+          <End>2270184.80655886 1571405.6498053</End>
+        </Spiral>
+        <Curve rot="cw">
+          <Start>2270184.80655886 1571405.6498053</Start>
+          <Center>2269787.7481110231 1571436.3041137513</Center>
+          <End>2270184.55475566 1571470.06184468</End>
+        </Curve>
+        <Spiral length="52.734417627994077" radiusEnd="INF" radiusStart="398.24000003165889" rot="cw" spiType="clothoid">
+          <Start>2270184.55475566 1571470.06184468</Start>
+          <PI>2270183.064081945 1571487.58403109</PI>
+          <End>2270177.77169161 1571522.34783628</End>
+        </Spiral>
+        <Line>
+          <Start>2270177.77169161 1571522.34783628</Start>
+          <End>2270023.73915924 1572534.13206219</End>
+        </Line>
+      </CoordGeom>
+      <Profile>
+        <ProfAlign name="Voie_Nivelee_Velodrome">
+          <PVI>-312.37756742462744 123.646844035158</PVI>
+          <ParaCurve length="102.20298706723341">74.612637097544322 125.969964519681</ParaCurve>
+          <ParaCurve length="74.170978447762252">471.04005103729423 112.009543401993</ParaCurve>
+          <ParaCurve length="15.752431155067825">663.10890349049362 111</ParaCurve>
+          <ParaCurve length="48.395400268820026">772.73596163101513 111</ParaCurve>
+          <ParaCurve length="141.8492909652648">1141.839163524364 96.666506731052</ParaCurve>
+          <ParaCurve length="87.833002373647332">1409.7638183928473 107.364034409039</ParaCurve>
+          <ParaCurve length="14.892685726267928">1926.2923746312408 109.929989492175</ParaCurve>
+          <ParaCurve length="49.075867351563375">2012.5944035451928 109.929989492175</ParaCurve>
+          <ParaCurve length="56.40636487651318">2588.0611038230518 113.460180423183</ParaCurve>
+          <PVI>2903.4090889087947 111.83715070691</PVI>
+          <Feature source="Linea 1.1.7358.18620">
+            <Property label="ProfAlignType" value="CrossLeveled" />
+            <Property label="LeveledAlignmentName" value="Axe_Ligne_Principal" />
+          </Feature>
+        </ProfAlign>
+      </Profile>
+    </Alignment>
+  </Alignments>
+  <Surfaces>
+    <Surface name="Montage_5Dalles_CC43">
+      <SourceData>
+        <PointFiles>
+          <PointFile fileName="C:\Dev2019\Linea\Linea.Excel\Linea.Excel\V1.1\Exemple_Autocad\ASC\Montage_5Dalles_CC43.tif" fileType="GTiff" fileFormat="GeoTIFF" />
+        </PointFiles>
+      </SourceData>
+    </Surface>
+    <Surface name="Bathy_Garonne">
+      <SourceData>
+        <PointFiles>
+          <PointFile fileName="C:\Dev2019\Linea\Linea.Excel\Linea.Excel\V1.1\Exemple_Autocad\Bathy\Bathy_Garonne.tif" fileType="GTiff" fileFormat="GeoTIFF" />
+        </PointFiles>
+      </SourceData>
+    </Surface>
+  </Surfaces>
+</LandXML>

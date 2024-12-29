@@ -9,7 +9,7 @@ using namespace LineaCore::Geometry::Alignments::Horizontal;
 
 TEST(StraightAlignmentTest, ReadWriteLandXML) {
     // Chemin vers le fichier d'exemple
-    const std::string inputFile = "path/to/v1.xml";
+    const std::string inputFile = "C:/yvans/Dev/CPP/Linea/Core/examples/LandXMLFiles/v1.xml";
     const std::string outputFile = "output.xml";
 
     // Charger le fichier d'entrée
@@ -45,6 +45,10 @@ TEST(StraightAlignmentTest, ReadWriteLandXML) {
     ASSERT_NE(writer, nullptr) << "Failed to create output file";
 
     xmlTextWriterStartDocument(writer, nullptr, "UTF-8", nullptr);
+        // Activer l'indentation
+    xmlTextWriterSetIndent(writer, 1);
+    xmlTextWriterSetIndentString(writer, BAD_CAST "  "); // Indentation avec 2 espaces
+    
     alignment->WriteLandXML(writer);
     xmlTextWriterEndDocument(writer);
 

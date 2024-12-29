@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<LandXML xmlns="http://www.landxml.org/schema/LandXML-1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.landxml.org/schema/LandXML-1.1 http://www.landxml.org/schema/landxml-1.1/LandXML-1.1.xsd" version="1.1" date="2020-01-07" time="11:44:00">
+  <Project name="DONGES">
+    <Feature code="GridScaleFactor">
+      <Property label="GridScaleFactor" value="1.000000000000"/>
+    </Feature>
+  </Project>
+  <Units>
+    <Imperial areaUnit="squareFoot" linearUnit="foot" volumeUnit="cubicFeet" temperatureUnit="fahrenheit" pressureUnit="inHG"/>
+  </Units>
+  <Application name="Power Rail Track V8i (SELECTseries 2)" manufacturer="Bentley Systems, Inc." version="08.11.07.617" manufacturerURL="www.bentley.com"/>
+  <Alignments>
+    <Alignment name="V1" length="4998.2315227" staStart="477200.0000000" state="proposed">
+      <CoordGeom name="V1" state="proposed">
+        <Line length="536.0975757" dir="4.115966693" staStart="477200.0000000">
+          <Start code="POB">
+              6248433.993484 1320073.617574 0.000000
+          </Start>
+          <End code="TS">
+              6248132.874953 1319630.077000 0.000000
+          </End>
+          <Feature code="Line">
+            <Property label="style" value="SC_BASE_VP_PL"/>
+          </Feature>
+        </Line>
+        <Spiral length="111.7202365" radiusEnd="1251.8997660" radiusStart="INF" rot="cw" spiType="clothoid" dirStart="4.115966693" dirEnd="4.160586973" staStart="477736.0975757" constant="373.9820021" theta="0.044620280" totalY="1.6614258" totalX="111.6979954" tanLong="74.4879404" tanShort="37.2471278">
+          <Start code="TS">
+              6248132.874953 1319630.077000 0.000000
+          </Start>
+          <PI code="PI">
+              6248091.036116 1319568.449369 0.000000
+          </PI>
+          <End code="SC">
+              6248071.510328 1319536.730413 0.000000
+          </End>
+          <Feature code="Spiral">
+            <Property label="style" value="SC_BASE_VP_PL"/>
+          </Feature>
+        </Spiral>
+        <Curve rot="cw" crvType="arc" length="499.9848217" chord="496.6685190" dirStart="4.160586973" dirEnd="4.559967846" staStart="477847.8178122" radius="1251.8997660">
+          <Start code="SC">
+              6248071.510328 1319536.730413 0.000000
+          </Start>
+          <Center code="CC">
+              6249137.604699 1318880.456219 0.000000
+          </Center>
+          <End code="CS">
+              6247900.218995 1319070.534213 0.000000
+          </End>
+          <Feature code="Curve">
+            <Property label="style" value="SC_BASE_VP_PL"/>
+          </Feature>
+        </Curve>
+        <Spiral length="110.0848084" radiusEnd="INF" radiusStart="1251.8997660" rot="cw" spiType="clothoid" dirStart="4.559967846" dirEnd="4.603934948" staStart="478347.8026339" constant="371.2346238" theta="0.043967102" totalY="1.6131466" totalX="110.0635298" tanLong="73.3973182" tanShort="36.7016801">
+          <Start code="CS">
+              6247900.218995 1319070.534213 0.000000
+          </Start>
+          <PI code="PI">
+              6247894.646518 1319034.258039 0.000000
+          </PI>
+          <End code="ST">
+              6247886.701879 1318961.291957 0.000000
+          </End>
+          <Feature code="Spiral">
+            <Property label="style" value="SC_BASE_VP_PL"/>
+          </Feature>
+        </Spiral>
+        <Line length="624.8563201" dir="4.603934948" staStart="478457.8874423">
+          <Start code="ST">
+              6247886.701879 1318961.291957 0.000000
+          </Start>
+          <End code="TS">
+              6247819.066465 1318340.106903 0.000000
+          </End>
+          <Feature code="Line">
+            <Property label="style" value="SC_BASE_VP_PL"/>
+          </Feature>
+        </Line>
+        <Spiral length="60.0000007" radiusEnd="5000.0000074" radiusStart="INF" rot="ccw" spiType="clothoid" dirStart="4.603934948" dirEnd="4.597934948" staStart="479082.7437624" constant="547.7225609" theta="0.006000000" totalY="0.1199997" totalX="59.9997847" tanLong="40.0000760" tanShort="20.0000687">
+          <Start code="TS">
+              6247819.066465 1318340.106903 0.000000
+          </Start>
+          <PI code="PI">
+              6247814.736795 1318300.341843 0.000000
+          </PI>
+          <End code="SC">
+              6247812.452701 1318280.472629 0.000000
+          </End>
+          <Feature code="Spiral">
+            <Property label="style" value="SC_BASE_VP_PL"/>
+          </Feature>
+        </Spiral>
+        <Curve rot="ccw" crvType="arc" length="159.2687132" chord="159.2619798" dirStart="4.597934948" dirEnd="4.566081205" staStart="479142.7437631" radius="5000.0000074">
+          <Start code="SC">
+              6247812.452701 1318280.472629 0.000000
+          </Start>
+          <Center code="CC">
+              6242845.166272 1318851.494179 0.000000
+          </Center>
+          <End code="CS">
+              6247791.746760 1318122.562394 0.000000
+          </End>
+          <Feature code="Curve">
+            <Property label="style" value="SC_BASE_VP_PL"/>
+          </Feature>
+        </Curve>
+        <Spiral length="60.0000014" radiusEnd="INF" radiusStart="5000.0000074" rot="ccw" spiType="clothoid" dirStart="4.566081205" dirEnd="4.560081205" staStart="479302.0124763" constant="547.7225643" theta="0.006000000" totalY="0.1199997" totalX="59.9997854" tanLong="40.0000765" tanShort="20.0000689">
+          <Start code="CS">
+              6247791.746760 1318122.562394 0.000000
+          </Start>
+          <PI code="PI">
+              6247788.831023 1318102.776004 0.000000
+          </PI>
+          <End code="ST">
+              6247782.762228 1318063.238985 0.000000
+          </End>
+          <Feature code="Spiral">
+            <Property label="style" value="SC_BASE_VP_PL"/>
+          </Feature>
+        </Spiral>
+        <Line length="1008.4759955" dir="4.560081205" staStart="479362.0124777">
+          <Start code="ST">
+              6247782.762228 1318063.238985 0.000000
+          </Start>
+          <End code="TS">
+              6247629.756659 1317066.437536 0.000000
+          </End>
+          <Feature code="Line">
+            <Property label="style" value="SC_BASE_VP_PL"/>
+          </Feature>
+        </Line>
+        <Spiral length="91.8230046" radiusEnd="488.1000000" radiusStart="INF" rot="ccw" spiType="clothoid" dirStart="4.560081205" dirEnd="4.466019533" staStart="480370.4884731" constant="211.7045313" theta="0.094061672" totalY="2.8771848" totalX="91.7417966" tanLong="61.2437803" tanShort="30.6334326">
+          <Start code="TS">
+              6247629.756659 1317066.437536 0.000000
+          </Start>
+          <PI code="PI">
+              6247620.464778 1317005.902740 0.000000
+          </PI>
+          <End code="SC">
+              6247612.993754 1316976.194307 0.000000
+          </End>
+          <Feature code="Spiral">
+            <Property label="style" value="SC_BASE_VP_PL"/>
+          </Feature>
+        </Spiral>
+        <Curve rot="ccw" crvType="arc" length="209.4026030" chord="207.8003977" dirStart="4.466019533" dirEnd="4.037003751" staStart="480462.3114778" radius="488.1000000">
+          <Start code="SC">
+              6247612.993754 1316976.194307 0.000000
+          </Start>
+          <Center code="CC">
+              6247139.632301 1317095.234404 0.000000
+          </Center>
+          <End code="CS">
+              6247520.577836 1316790.075250 0.000000
+          </End>
+          <Feature code="Curve">
+            <Property label="style" value="SC_BASE_VP_PL"/>
+          </Feature>
+        </Curve>
+        <Spiral length="91.8214538" radiusEnd="INF" radiusStart="488.1000000" rot="ccw" spiType="clothoid" dirStart="4.037003751" dirEnd="3.942943667" staStart="480671.7140807" constant="211.7027435" theta="0.094060084" totalY="2.8770877" totalX="91.7402499" tanLong="61.2427449" tanShort="30.6329144">
+          <Start code="CS">
+              6247520.577836 1316790.075250 0.000000
+          </Start>
+          <PI code="PI">
+              6247501.426198 1316766.167296 0.000000
+          </PI>
+          <End code="ST">
+              6247458.817360 1316722.176835 0.000000
+          </End>
+          <Feature code="Spiral">
+            <Property label="style" value="SC_BASE_VP_PL"/>
+          </Feature>
+        </Spiral>
+        <Line length="310.4768545" dir="3.942943667" staStart="480763.5355345">
+          <Start code="ST">
+              6247458.817360 1316722.176835 0.000000
+          </Start>
+          <End code="TS">
+              6247242.807151 1316499.162336 0.000000
+          </End>
+          <Feature code="Line">
+            <Property label="style" value="SC_BASE_VP_PL"/>
+          </Feature>
+        </Line>
+        <Spiral length="92.2000000" radiusEnd="493.9000000" radiusStart="INF" rot="cw" spiType="clothoid" dirStart="3.942943667" dirEnd="4.036282400" staStart="481074.0123890" constant="213.3953608" theta="0.093338733" totalY="2.8668211" totalX="92.1197067" tanLong="61.4947896" tanShort="30.7588070">
+          <Start code="TS">
+              6247242.807151 1316499.162336 0.000000
+          </Start>
+          <PI code="PI">
+              6247200.022956 1316454.990832 0.000000
+          </PI>
+          <End code="SC">
+              6247180.775298 1316430.998502 0.000000
+          </End>
+          <Feature code="Spiral">
+            <Property label="style" value="SC_BASE_VP_PL"/>
+          </Feature>
+        </Spiral>
+        <Curve rot="cw" crvType="arc" length="680.9862986" chord="628.3118820" dirStart="4.036282400" dirEnd="5.415076283" staStart="481166.2123890" radius="493.9000000">
+          <Start code="SC">
+              6247180.775298 1316430.998502 0.000000
+          </Start>
+          <Center code="CC">
+              6247566.024694 1316121.935219 0.000000
+          </Center>
+          <End code="CS">
+              6247189.125544 1315802.742110 0.000000
+          </End>
+          <Feature code="Curve">
+            <Property label="style" value="SC_BASE_VP_PL"/>
+          </Feature>
+        </Curve>
+        <Spiral length="92.2000000" radiusEnd="INF" radiusStart="493.9000000" rot="cw" spiType="clothoid" dirStart="5.415076283" dirEnd="5.508415015" staStart="481847.1986876" constant="213.3953608" theta="0.093338733" totalY="2.8668211" totalX="92.1197067" tanLong="61.4947896" tanShort="30.7588070">
+          <Start code="CS">
+              6247189.125544 1315802.742110 0.000000
+          </Start>
+          <PI code="PI">
+              6247209.004061 1315779.269811 0.000000
+          </PI>
+          <End code="ST">
+              6247252.947115 1315736.251011 0.000000
+          </End>
+          <Feature code="Spiral">
+            <Property label="style" value="SC_BASE_VP_PL"/>
+          </Feature>
+        </Spiral>
+        <Line length="258.8328350" dir="5.508415015" staStart="481939.3986876">
+          <Start code="ST">
+              6247252.947115 1315736.251011 0.000000
+          </Start>
+          <End code="POE">
+              6247437.904334 1315555.183997 0.000000
+          </End>
+          <Feature code="Line">
+            <Property label="style" value="SC_BASE_VP_PL"/>
+          </Feature>
+        </Line>
+      </CoordGeom>
+      <StaEquation staAhead="482000.0000000" staBack="481719.6449434" staInternal="481719.6449434">
+        <Feature code="StaEquation">
+          <Property label="bckEqn" value=""/>
+          <Property label="ahdEqn" value="A"/>
+        </Feature>
+      </StaEquation>
+      <Profile>
+        <ProfAlign name="PL_V1_00">
+          <PVI>
+              477350.000000 5.299000
+          </PVI>
+          <PVI>
+              477449.470000 5.457121
+          </PVI>
+          <CircCurve radius="-10000.0000000" length="89.2635625">
+              477929.380000 5.497000
+          </CircCurve>
+          <CircCurve radius="10000.0000000" length="120.8686309">
+              478230.530000 8.210307
+          </CircCurve>
+          <PVI>
+              478487.890000 7.418301
+          </PVI>
+          <PVI>
+              478640.000000 7.197490
+          </PVI>
+          <PVI>
+              479400.000000 5.606083
+          </PVI>
+          <CircCurve radius="-10000.0000000" length="85.0017803">
+              479888.213000 5.606130
+          </CircCurve>
+          <CircCurve radius="10000.0000000" length="125.0556723">
+              480243.609000 8.627203
+          </CircCurve>
+          <CircCurve radius="-15000.0000000" length="99.8453750">
+              480944.515000 5.819847
+          </CircCurve>
+          <PVI>
+              481320.000000 6.815286
+          </PVI>
+          <CircCurve radius="9000.0000000" length="79.9300368">
+              481545.068000 7.709236
+          </CircCurve>
+          <PVI>
+              481830.491943 6.308005
+          </PVI>
+          <CircCurve radius="-15000.0000000" length="101.7219403">
+              482041.649943 5.028436
+          </CircCurve>
+          <PVI>
+              482175.430943 5.125000
+          </PVI>
+          <Feature code="ProfAlign">
+            <Property label="style" value="EPURE_SNCF"/>
+          </Feature>
+        </ProfAlign>
+      </Profile>
+      <Cant name="V1_d�vers" desc="devers" gauge="4.7083333" rotationPoint="insideRail">
+        <CantStation station="477200.0000000" appliedCant="0.000" curvature="cw" adverse="false"/>
+        <CantStation station="477736.0975757" appliedCant="0.000" curvature="cw" adverse="false"/>
+        <CantStation station="477847.8178122" appliedCant="1.320" curvature="cw" adverse="false"/>
+        <CantStation station="478347.8026339" appliedCant="1.320" curvature="cw" adverse="false"/>
+        <CantStation station="478457.8874423" appliedCant="0.000" curvature="ccw" adverse="false"/>
+        <CantStation station="479082.7437624" appliedCant="0.000" curvature="cw" adverse="false"/>
+        <CantStation station="479142.7437631" appliedCant="0.324" curvature="ccw" adverse="false"/>
+        <CantStation station="479302.0124763" appliedCant="0.324" curvature="ccw" adverse="false"/>
+        <CantStation station="479362.0124777" appliedCant="0.000" curvature="cw" adverse="false"/>
+        <CantStation station="480370.4884731" appliedCant="0.000" curvature="cw" adverse="false"/>
+        <CantStation station="480462.3114778" appliedCant="1.800" curvature="ccw" adverse="false"/>
+        <CantStation station="480671.7140807" appliedCant="1.800" curvature="ccw" adverse="false"/>
+        <CantStation station="480763.5355345" appliedCant="0.000" curvature="cw" adverse="false"/>
+        <CantStation station="481074.0123890" appliedCant="0.000" curvature="cw" adverse="false"/>
+        <CantStation station="481166.2123890" appliedCant="1.800" curvature="cw" adverse="false"/>
+        <CantStation station="481847.1986876" appliedCant="1.800" curvature="cw" adverse="false"/>
+        <CantStation station="481939.3986876" appliedCant="0.000" curvature="ccw" adverse="false"/>
+        <CantStation station="482198.2315227" appliedCant="0.000" curvature="cw" adverse="false"/>
+      </Cant>
+      <Feature code="Alignment">
+        <Property label="style" value="SC_BASE_VP_PL"/>
+        <Property label="guid" value="e9383f36-18f9-4268-9ca4-ee489eb62574"/>
+      </Feature>
+    </Alignment>
+  </Alignments>
+</LandXML>
