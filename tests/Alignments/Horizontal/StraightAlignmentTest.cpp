@@ -35,10 +35,10 @@ TEST(StraightAlignmentTest, ReadWriteLandXML) {
     xmlFreeTextReader(reader);
 
     // Vérifier les données lues
-    EXPECT_NEAR(alignment->getStartingPoint().X, 123.456, 0.001);
-    EXPECT_NEAR(alignment->getStartingPoint().Y, 654.321, 0.001);
-    EXPECT_NEAR(alignment->getEndingPoint().X, 789.012, 0.001);
-    EXPECT_NEAR(alignment->getEndingPoint().Y, 210.987, 0.001);
+    EXPECT_NEAR(alignment->getStartingPoint().X, 1320073.617574, 0.001);
+    EXPECT_NEAR(alignment->getStartingPoint().Y, 6248433.993484, 0.001);
+    EXPECT_NEAR(alignment->getEndingPoint().X, 1319630.077000, 0.001);
+    EXPECT_NEAR(alignment->getEndingPoint().Y, 6248132.874953, 0.001);
 
     // Écrire dans un fichier de sortie
     xmlTextWriterPtr writer = xmlNewTextWriterFilename(outputFile.c_str(), 0);
@@ -62,8 +62,8 @@ TEST(StraightAlignmentTest, ReadWriteLandXML) {
     std::string outputContent = outBuffer.str();
     EXPECT_NE(outputContent.find("<Start>"), std::string::npos);
     EXPECT_NE(outputContent.find("<End>"), std::string::npos);
-    EXPECT_NE(outputContent.find("123.456"), std::string::npos);
-    EXPECT_NE(outputContent.find("654.321"), std::string::npos);
-    EXPECT_NE(outputContent.find("789.012"), std::string::npos);
-    EXPECT_NE(outputContent.find("210.987"), std::string::npos);
+    EXPECT_NE(outputContent.find("1320073.617574"), std::string::npos);
+    EXPECT_NE(outputContent.find("6248433.993484"), std::string::npos);
+    EXPECT_NE(outputContent.find("1319630.077000"), std::string::npos);
+    EXPECT_NE(outputContent.find("6248132.874953"), std::string::npos);
 }

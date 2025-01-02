@@ -5,7 +5,6 @@
 #include "LineaCore/Geometry/Vector2D.hpp"
 #include <vector>
 #include <string>
-#include <stdexcept>
 
 namespace LineaCore::Geometry::Alignments::Horizontal {
 
@@ -37,7 +36,6 @@ public:
     virtual double Curvature(double s) const = 0;
     virtual std::vector<Point2D> Points(double maxThrow) const = 0;
 
-
     // Accesseurs pour les points et vecteurs calculés
     const Point2D& getStartingPoint() const { return startingPoint; }
     const Point2D& getEndingPoint() const { return endingPoint; }
@@ -45,5 +43,5 @@ public:
     const Vector2D& getEndingNormal() const { return endingNormal; }
 };
 
-} // namespace LineaCore::Geometry::Alignments::Horizontal 
+} // namespace LineaCore::Geometry::Alignments::Horizontal
 

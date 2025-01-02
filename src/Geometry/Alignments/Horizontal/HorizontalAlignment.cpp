@@ -1,4 +1,5 @@
 // HorizontalAlignment.cpp
+
 #include "LineaCore/Geometry/Alignments/Horizontal/HorizontalAlignment.hpp"
 
 namespace LineaCore::Geometry::Alignments::Horizontal {

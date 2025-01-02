@@ -6,14 +6,6 @@
 
 namespace LineaCore::Geometry::Alignments::Horizontal {
 
-StraightAlignment::StraightAlignment()
-    : _normedVector(1.0, 0.0), // Vecteur unitaire par défaut (direction X)
-      _ds(0.0)                 // Longueur par défaut
-{
-    startingPoint = Point2D(0.0, 0.0);
-    SetExtremities(); // Initialise les extrémités avec les valeurs par défaut
-}
-
 StraightAlignment::StraightAlignment(const Point2D &stPoint, const Vector2D &vector)
     : _normedVector(vector.Normalized()),
         _ds(vector.Length()) {

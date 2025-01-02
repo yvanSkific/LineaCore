@@ -1,7 +1,9 @@
 // Vector2D.cpp
 #include "LineaCore/Geometry/Vector2D.hpp"
+#include "LineaCore/Geometry/Point2D.hpp"
 #include <cmath>
 #include <sstream>
+#include <stdexcept>
 #include <numbers>
 
 namespace LineaCore::Geometry {
@@ -68,6 +70,11 @@ double Vector2D::AngleMinusPiPi() const {
     return std::atan2(Y, X);
 }
 
+// Projection dans une référence vectorielle donnée
+Vector2D Vector2D::InVectorialReference(const Vector2D& refVect) const {
+    return Vector2D(X * refVect.X + Y * refVect.Y, Y * refVect.X - X * refVect.Y);
+}
+
 // Opérateurs
 // Produit scalaire entre deux vecteurs
 double Vector2D::operator*(const Vector2D& v) const {
@@ -115,6 +122,11 @@ bool Vector2D::operator==(const Vector2D& v) const {
 // Vérifie l'inégalité entre deux vecteurs
 bool Vector2D::operator!=(const Vector2D& v) const {
     return !(*this == v);
+}
+
+// Conversion explicite en Point2D
+Vector2D::operator LineaCore::Geometry::Point2D() const {
+    return Point2D(X, Y);
 }
 
 // Méthodes utilitaires

@@ -13,7 +13,7 @@ private:
     double _ds;
 
 public:
-    StraightAlignment();
+    StraightAlignment(){};
     StraightAlignment(const Point2D& ptDebut, const Vector2D& vecteur);
     StraightAlignment(const Point2D& ptDebut, const Vector2D& vecteur, double longueur);
 
