@@ -32,15 +32,15 @@ Point2D StraightAlignment::Point(double s) const {
     return startingPoint + _normedVector * s;
 }
 
-Vector2D StraightAlignment::Normal(double s) const {
+Vector2D StraightAlignment::Normal(double /*s*/) const {
     return _normedVector.Rotated90ClockWise();
 }
 
-double StraightAlignment::Curvature(double s) const {
+double StraightAlignment::Curvature(double /*s*/) const {
     return 0.0;
 }
 
-std::vector<Point2D> StraightAlignment::Points(double maxThrow) const {
+std::vector<Point2D> StraightAlignment::Points(double /*maxThrow*/) const {
     return {startingPoint, startingPoint + _normedVector * _ds};
 }
 
@@ -55,12 +55,10 @@ void StraightAlignment::ReadLandXML(xmlTextReaderPtr reader) {
         if (xmlTextReaderNodeType(reader) == XML_READER_TYPE_ELEMENT) {
             std::string nodeName = reinterpret_cast<const char*>(xmlTextReaderConstLocalName(reader));
             if (nodeName == "Start") {
-                std::string content = reinterpret_cast<const char*>(xmlTextReaderReadString(reader));
-                start = LandXML::XMLUtils::ReadContentAsPoint2D(content, "Start");
+                start = LandXML::XMLUtils::ReadContentAsPoint2D(reader, "Start");
                 foundStart = true;
             } else if (nodeName == "End") {
-                std::string content = reinterpret_cast<const char*>(xmlTextReaderReadString(reader));
-                end = LandXML::XMLUtils::ReadContentAsPoint2D(content, "End");
+                end = LandXML::XMLUtils::ReadContentAsPoint2D(reader, "End");
                 foundEnd = true;
             }
         } else if (xmlTextReaderNodeType(reader) == XML_READER_TYPE_END_ELEMENT) {
@@ -86,26 +84,17 @@ void StraightAlignment::ReadLandXML(xmlTextReaderPtr reader) {
 }
 
 void StraightAlignment::WriteLandXML(xmlTextWriterPtr writer) const {
-    if (xmlTextWriterStartElement(writer, BAD_CAST "Line") < 0) {
-        throw std::runtime_error("Error starting <Line> element");
-    }
+    xmlTextWriterStartElement(writer, BAD_CAST "Line");
 
-    if (xmlTextWriterStartElement(writer, BAD_CAST "Start") < 0 ||
-        xmlTextWriterWriteFormatString(writer, "%f %f", startingPoint.Y, startingPoint.X) < 0 ||
-        xmlTextWriterEndElement(writer) < 0) {
-        throw std::runtime_error("Error writing <Start> element");
-    }
+    xmlTextWriterStartElement(writer, BAD_CAST "Start");
+    xmlTextWriterWriteFormatString(writer, LandXML::xmlCoordFormat, startingPoint.Y, startingPoint.X);
+    xmlTextWriterEndElement(writer);
 
-    if (xmlTextWriterStartElement(writer, BAD_CAST "End") < 0 ||
-        xmlTextWriterWriteFormatString(writer, "%f %f", endingPoint.Y, endingPoint.X) < 0 ||
-        xmlTextWriterEndElement(writer) < 0) {
-        throw std::runtime_error("Error writing <End> element");
-    }
+    xmlTextWriterStartElement(writer, BAD_CAST "End");
+    xmlTextWriterWriteFormatString(writer, LandXML::xmlCoordFormat, endingPoint.Y, endingPoint.X);
+    xmlTextWriterEndElement(writer);
 
-    if (xmlTextWriterEndElement(writer) < 0) {
-        throw std::runtime_error("Error ending <Line> element");
-    }
+    xmlTextWriterEndElement(writer);
 }
-
 
 } // namespace LineaCore::Geometry::Alignments::Horizontal

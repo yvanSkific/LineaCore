@@ -13,7 +13,7 @@ CurvedAlignment::CurvedAlignment(const Point2D& centre, double rayonAbs, double 
 }
 
 CurvedAlignment::CurvedAlignment(const Point2D& centre, double rayon, double angDebut, double longueurDev)
-    : CurvedAlignment(centre, std::abs(rayon), (rayon >= 0.0 ? 1.0 : -1.0), angDebut, longueurDev) {}
+    : CurvedAlignment(centre, std::fabs(rayon), (rayon >= 0.0 ? 1.0 : -1.0), angDebut, longueurDev) {}
 
 HorizontalAlignment::H_Type CurvedAlignment::Type() const {
     return HorizontalAlignment::H_Type::Curved;
@@ -57,9 +57,7 @@ std::vector<Point2D> CurvedAlignment::Points(double maxThrow) const {
 }
 
 void CurvedAlignment::ReadLandXML(xmlTextReaderPtr reader) {
-    std::string rot = LandXML::XMLUtils::ReadAttributeAsString(
-        reinterpret_cast<const char*>(xmlTextReaderGetAttribute(reader, BAD_CAST "rot")),
-        reinterpret_cast<const char*>(xmlTextReaderConstName(reader)), "rot");
+    std::string rot = LandXML::XMLUtils::ReadAttributeAsString(reader, "rot");
 
     if (rot != "cw" && rot != "ccw") {
         throw std::runtime_error("Attribute 'rot' value must be \"cw\" or \"ccw\" in Element <" +
@@ -75,14 +73,11 @@ void CurvedAlignment::ReadLandXML(xmlTextReaderPtr reader) {
         if (xmlTextReaderNodeType(reader) == XML_READER_TYPE_ELEMENT) {
             std::string elementName(reinterpret_cast<const char*>(xmlTextReaderConstName(reader)));
             if (elementName == "Start") {
-                start = LandXML::XMLUtils::ReadContentAsPoint2D(
-                    reinterpret_cast<const char*>(xmlTextReaderReadString(reader)), "Start");
+                start = LandXML::XMLUtils::ReadContentAsPoint2D(reader, "Start");
             } else if (elementName == "Center") {
-                center = LandXML::XMLUtils::ReadContentAsPoint2D(
-                    reinterpret_cast<const char*>(xmlTextReaderReadString(reader)), "Center");
+                center = LandXML::XMLUtils::ReadContentAsPoint2D(reader, "Center");
             } else if (elementName == "End") {
-                end = LandXML::XMLUtils::ReadContentAsPoint2D(
-                    reinterpret_cast<const char*>(xmlTextReaderReadString(reader)), "End");
+                end = LandXML::XMLUtils::ReadContentAsPoint2D(reader, "End");
             }
         } else if (xmlTextReaderNodeType(reader) == XML_READER_TYPE_END_ELEMENT) {
             std::string elementName(reinterpret_cast<const char*>(xmlTextReaderConstName(reader)));
@@ -155,12 +150,12 @@ bool CurvedAlignment::TryFromChordAndRadius(const Point2D& ptO, const Vector2D& 
     double tanTheta = 0.0;
     double d = v.Length() / 2.0;
 
-    if (d > std::abs(rr)) {
+    if (d > std::fabs(rr)) {
         curve.reset();
         return false;
     }
 
-    double absR = std::abs(rr);
+    double absR = std::fabs(rr);
     double sens = (rr >= 0.0 ? 1.0 : -1.0);
     Point2D ptC;
     double angDeb;
@@ -175,7 +170,7 @@ bool CurvedAlignment::TryFromChordAndRadius(const Point2D& ptO, const Vector2D& 
     }
 
     angDeb = static_cast<Vector2D>(-ptC).Angle02Pi();
-    ds = std::abs(std::atan(tanTheta) * 2.0 * absR);
+    ds = std::fabs(std::atan(tanTheta) * 2.0 * absR);
     ptC.TranslateBy(Vector2D(ptO));
 
     curve = std::make_unique<CurvedAlignment>(ptC, sens * absR, angDeb, ds);

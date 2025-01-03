@@ -1,4 +1,5 @@
 // TransitionAlignment.hpp
+#pragma once
 
 #include "HorizontalAlignment.hpp"
 
@@ -12,6 +13,8 @@ public:
     // Constructeur et destructeur
     TransitionAlignment() = default;
     virtual ~TransitionAlignment() = default;
+
+    H_Type Type() const override;
 
 };
 

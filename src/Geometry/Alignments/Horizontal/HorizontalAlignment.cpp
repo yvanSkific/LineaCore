@@ -12,4 +12,14 @@ void HorizontalAlignment::SetExtremities()
     endingNormal = Normal(Length());
 }
 
-} // namespace LineaCore::Geometry::Alignments::Horizontal 
+// Getter pour la tangente de départ
+Vector2D HorizontalAlignment::StartingTangent() const{
+    return startingNormal.Rotated90CounterClockWise();
+}
+
+// Getter pour la tangente de fin
+Vector2D HorizontalAlignment::EndingTangent() const{
+    return endingNormal.Rotated90CounterClockWise();
+}
+
+} // namespace LineaCore::Geometry::Alignments::Horizontal

@@ -41,6 +41,11 @@ public:
     const Point2D& getEndingPoint() const { return endingPoint; }
     const Vector2D& getStartingNormal() const { return startingNormal; }
     const Vector2D& getEndingNormal() const { return endingNormal; }
+
+    // Getter pour la tangente de départ et de fin
+    Vector2D StartingTangent() const;
+    Vector2D EndingTangent() const;
+    
 };
 
 } // namespace LineaCore::Geometry::Alignments::Horizontal

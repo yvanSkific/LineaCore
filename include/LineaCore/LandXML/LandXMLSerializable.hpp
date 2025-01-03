@@ -8,6 +8,8 @@
 
 namespace LineaCore::LandXML {
 
+constexpr const char* xmlCoordFormat = "%.15g %.15g";
+
 class LandXMLSerializable {
 public:
     virtual ~LandXMLSerializable() = default;

@@ -41,7 +41,64 @@ TEST(GeometryUtilsTest, BrentFunctionValue_NoRoot) {
     EXPECT_TRUE(result.IsNaN());
 }
 
-int main(int argc, char **argv) {
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
+
+// Test case for successful conversions
+TEST(GeometryUtils, TryParseAsDouble_Success) {
+    double value;
+
+    EXPECT_TRUE(GeometryUtils::TryParseAsDouble("123.456", value));
+    EXPECT_DOUBLE_EQ(value, 123.456);
+
+    EXPECT_TRUE(GeometryUtils::TryParseAsDouble("   123.456   ", value));
+    EXPECT_DOUBLE_EQ(value, 123.456);
+
+    EXPECT_TRUE(GeometryUtils::TryParseAsDouble("INF", value));
+    EXPECT_EQ(value, std::numeric_limits<double>::infinity());
+
+    EXPECT_TRUE(GeometryUtils::TryParseAsDouble("   -INF   ", value));
+    EXPECT_EQ(value, -std::numeric_limits<double>::infinity());
 }
+
+// Test case for failed conversions
+TEST(GeometryUtils, TryParseAsDouble_Failure) {
+    double value;
+
+    EXPECT_FALSE(GeometryUtils::TryParseAsDouble("", value));
+    EXPECT_TRUE(std::isnan(value));
+
+    EXPECT_FALSE(GeometryUtils::TryParseAsDouble("   ", value));
+    EXPECT_TRUE(std::isnan(value));
+
+    EXPECT_FALSE(GeometryUtils::TryParseAsDouble("123.45abc", value));
+    EXPECT_TRUE(std::isnan(value));
+
+    EXPECT_FALSE(GeometryUtils::TryParseAsDouble("abc123.45", value));
+    EXPECT_TRUE(std::isnan(value));
+
+    EXPECT_FALSE(GeometryUtils::TryParseAsDouble("..123", value));
+    EXPECT_TRUE(std::isnan(value));
+}
+
+// Test edge cases
+TEST(GeometryUtils, TryParseAsDouble_EdgeCases) {
+    double value;
+
+    EXPECT_TRUE(GeometryUtils::TryParseAsDouble("0", value));
+    EXPECT_DOUBLE_EQ(value, 0.0);
+
+    EXPECT_TRUE(GeometryUtils::TryParseAsDouble("-0", value));
+    EXPECT_DOUBLE_EQ(value, -0.0);
+
+    EXPECT_TRUE(GeometryUtils::TryParseAsDouble("1e10", value));
+    EXPECT_DOUBLE_EQ(value, 1e10);
+
+    EXPECT_TRUE(GeometryUtils::TryParseAsDouble("-1e-10", value));
+    EXPECT_DOUBLE_EQ(value, -1e-10);
+
+    EXPECT_TRUE(GeometryUtils::TryParseAsDouble("1.7976931348623157e308", value));
+    EXPECT_DOUBLE_EQ(value, std::numeric_limits<double>::max());
+
+    EXPECT_TRUE(GeometryUtils::TryParseAsDouble("2.2250738585072014e-308", value));
+    EXPECT_DOUBLE_EQ(value, std::numeric_limits<double>::min());
+}
+

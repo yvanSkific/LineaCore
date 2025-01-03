@@ -1,9 +1,9 @@
 // GeometryUtils.cpp
 #include "LineaCore/Geometry/GeometryUtils.hpp"
+#include "LineaCore/Geometry/Vector2D.hpp"
 #include <cmath>
 #include <limits>
 #include <algorithm> // for std::swap
-#include "GeometryUtils.hpp"
 
 namespace LineaCore::Geometry {
 
@@ -14,6 +14,26 @@ double GeometryUtils::inverseQuadraticInterpolation(double a, double fa, double 
     return a * fb * fc / ((fa - fb) * (fa - fc)) +
            b * fa * fc / ((fb - fa) * (fb - fc)) +
            c * fa * fb / ((fc - fa) * (fc - fb));
+}
+
+Point2D GeometryUtils::IntersectionStraightStraight(
+    const Point2D& pt0, const Vector2D& v0,
+    const Point2D& pt1, const Vector2D& v1)
+{
+    // Crée des copies normalisées des vecteurs
+    Vector2D normalizedV0 = v0.Normalized();
+    Vector2D normalizedV1 = v1.Normalized();
+
+    // Calcul du déterminant pour vérifier si les droites sont parallèles
+    double determinant = normalizedV1 / normalizedV0;
+    if (determinant != 0) {
+        // Calcul de l'intersection
+        Point2D intersection = pt0 + normalizedV0 * (normalizedV1 / (pt1 - pt0) / determinant);
+        return intersection;
+    } else {
+        // Si les droites sont parallèles, retourne un Point2D::NaN
+        return Point2D::NaN();
+    }
 }
 
 Point2D GeometryUtils::BrentFunctionValue(double x0, double dx, double yc, double xRef, std::function<double(double)> f, bool *byExcess)
@@ -139,6 +159,36 @@ Point2D GeometryUtils::BrentFunctionValue(double x0, double dx, double yc, doubl
                 return Point2D(b, fb + yc);
             }
         }
+    }
+}
+
+bool GeometryUtils::TryParseAsDouble(std::string strValue, double& value) {
+    // Supprime les espaces en fin de chaîne pour être certain que *endPtr == '\0' après la conversion
+    TrimEndingWhitespace(strValue);
+
+    if (strValue.empty()) {
+        value = std::numeric_limits<double>::quiet_NaN();
+        return false;
+    }
+
+    char* endPtr = nullptr;
+    value = std::strtod(strValue.c_str(), &endPtr);
+
+    // Vérifie si la chaîne a été entièrement consommée
+    if (*endPtr != '\0') {
+        value = std::numeric_limits<double>::quiet_NaN();
+        return false;
+    }
+
+    return true;
+}
+
+void GeometryUtils::TrimEndingWhitespace(std::string& str) {
+
+    size_t end = str.find_last_not_of(" \t\n\r\f\v");
+
+    if (end != std::string::npos) {
+        str = str.substr(0, end + 1);
     }
 }
 

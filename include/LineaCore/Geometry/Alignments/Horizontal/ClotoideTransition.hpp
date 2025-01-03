@@ -13,7 +13,7 @@ class ClotoideTransition : public TransitionAlignment, public LandXML::LandXMLSe
 private:
     double _A;                      // Paramètre de la cloto
     double _startAbscissa;          // Longueur développée entre l'origine de la cloto et le point de début
-    double _length;                 // Longueur développée de l'arc de cloto
+    double _ds;                     // Longueur développée de l'arc de cloto
 
     Vector2D _rotationVector;       // Vecteur rotation pour le passage du repère local au repère global
     Vector2D _translationVector;    // Vecteur translation pour le passage du repère local au repère global
@@ -22,7 +22,6 @@ public:
     ClotoideTransition(double parameter, double startAbscissa, double length, const Vector2D& rotationVector, const Vector2D& translationVector);
     virtual ~ClotoideTransition() = default;
 
-    H_Type Type() const override;
     double Length() const override;
 
     Point2D Point(double s) const override;
@@ -36,13 +35,16 @@ public:
 
     // Constructeurs statiques pour générer des transitions
     static bool TryFromVectorAndCurvatures(const Point2D& startingPoint, const Vector2D& chordVector, double startingCurvature, double endingCurvature, ClotoideTransition& clotoideArc);
-    static bool TryFromPointToAlign(const Point2D& point, const Point2D& alignmentOrigin, const Vector2D& alignmentVector, ClotoideTransition& clotoideArc);
-    static bool TryFromAlignToPoint(const Point2D& oAlign, const Vector2D& vAlign, const Point2D& Pt, ClotoideTransition& clotoide);
+    //static bool TryFromPointToAlign(const Point2D& point, const Point2D& alignmentOrigin, const Vector2D& alignmentVector, ClotoideTransition& clotoideArc);
+    //static bool TryFromAlignToPoint(const Point2D& oAlign, const Vector2D& vAlign, const Point2D& Pt, ClotoideTransition& clotoide);
 
 private:
+
+    Point2D PI() const;
     static Point2D PtLoc(double s, double A);
-    static Vector2D PtUnit(double s);
-    static double YsurXclotoUnit(double x);
+    bool IsCounterClockWise() const;
+    //static Vector2D PtUnit(double s);
+    //static double YsurXclotoUnit(double x);
 };
 
 } // namespace LineaCore::Geometry::Alignments::Horizontal
